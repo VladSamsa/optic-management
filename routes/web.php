@@ -21,6 +21,8 @@ Route::get('/login', function () {
     return view('auth.login');
 });
 
+Route::view('/panel', 'panel.index')->name('panel');  
+
 Route::get('/401', function () {
     return view('pages.401');
 });
