@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\categoriaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,7 +22,10 @@ Route::get('/login', function () {
     return view('auth.login');
 });
 
-Route::view('/panel', 'panel.index')->name('panel');  
+Route::view('/panel', 'panel.index')->name('panel');
+
+
+Route::resource('categorias',categoriaController::class);
 
 Route::get('/401', function () {
     return view('pages.401');
