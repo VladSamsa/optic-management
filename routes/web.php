@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\categoriaController;
+use App\Http\Controllers\OrdenController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,8 +25,9 @@ Route::get('/login', function () {
 
 Route::view('/panel', 'panel.index')->name('panel');
 
-
 Route::resource('categorias',categoriaController::class);
+
+Route::resource('ordens',OrdenController::class);
 
 Route::get('/401', function () {
     return view('pages.401');

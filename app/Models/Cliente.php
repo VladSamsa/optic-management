@@ -16,4 +16,8 @@ class Cliente extends Model
     public function ventas(){
         return $this->hasMany(Venta::class);
     }
+
+    public function orden(){
+        return $this->belongsTo(Orden::class);
+    }
 }
