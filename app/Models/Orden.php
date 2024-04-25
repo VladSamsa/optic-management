@@ -12,4 +12,6 @@ class Orden extends Model
     public function cliente(){
         return $this->hasOne(Cliente::class);
     }
+
+    protected $fillable = ['orden_id'];
 }
